@@ -23,14 +23,33 @@ export default function Question_01() {
 
   // 定数群
   const message = "Hello World!";   // 変更しない
-  const date = "";                  // 本日の日付 (YYYY/MM/DD)
-  const id = "";                    // あなたの学籍番号
+  const date = "2024/9/26";                  // 本日の日付 (YYYY/MM/DD)
+  const id = "28";                    // あなたの学籍番号
 
   return (
     <div>
       <h1 className='question-title'>【問１】React要素の作成</h1>
       <div className='question-content'>
       {/* ↓↓↓ 描画する内容を書く ↓↓↓ */}
+
+      import { createElement } from 'react';
+
+      function Greeting({ Question_01ame }) {
+        return createElement(
+          'h1',
+          { className: 'message' },
+          'Hello World! ',
+          createElement('i', null, id),
+          '28!'
+        );
+      }
+
+      export default function App() {
+        return createElement(
+          Greeting,
+          { date: '2024/9/26' }
+        );
+      }
 
 
       {/* ↑↑↑ 描画する内容を書く ↑↑↑ */}

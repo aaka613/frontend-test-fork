@@ -39,6 +39,12 @@ export default function Question_02() {
       </li>
     );
   });
+  
+  var array = [1, 2, 3, 4, 5, 6, 7, 8];
+
+array.forEach(function (value, index) {
+  console.log(index + '番目 : ' + value);
+});
 
   return (
     <div>
